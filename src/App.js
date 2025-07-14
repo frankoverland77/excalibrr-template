@@ -9,6 +9,7 @@ import { NavigationContextProvider, ThemeContextProvider, MaterialIcon } from '@
 import Dashboard from './Dashboard.jsx';
 import DefaultPage from './DefaultPage.jsx';
 import BasicNavigation from './BasicNavigation.jsx';
+import NavigationTemplate from './NavigationTemplate.jsx';
 
 import './App.css';
 
@@ -51,6 +52,12 @@ const pageConfig = {
     icon: <MaterialIcon name="navigation" />,
     element: <BasicNavigation />,
   },
+  navigationTemplate: {
+    key: 'navigation-template',
+    title: 'Navigation Template',
+    icon: <MaterialIcon name="map" />,
+    element: <NavigationTemplate />,
+  },
   dashboard: {
     key: 'dashboard',
     title: 'Dashboard',
@@ -83,6 +90,7 @@ function App() {
             <Route path="/" element={<DefaultPage />} />
             <Route path="home" element={<DefaultPage />} />
             <Route path="navigation" element={<BasicNavigation />} />
+            <Route path="navigation-template" element={<NavigationTemplate />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="analytics" element={<div>Analytics Page RENDERED!</div>} />
           </Routes>
